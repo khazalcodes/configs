@@ -37,6 +37,9 @@ call plug#end()
 colorscheme gruvbox
 set background=dark
 
+" Make background transparent
+hi! Normal ctermbg=NONE guibg=NONE 
+
 if executable('rg')
     let g:rg_derive_root='true'
 endif

@@ -182,6 +182,7 @@ bar {
         status_command i3status
 }
 
+exec_always --no-startup-id $HOME/.config/i3/custom_additions.sh
 #bindsym XF86MonBrightnessUp exec light -A 1 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec light -U 1 # decrease screen brightness
 bindsym $mod+Shift+x exec i3lock
@@ -198,6 +199,13 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 # Touchpad controls
 bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
-# Set background
-exec_always feh --bg-scale /some/path/background.jpg
 
+exec_always feh --bg-scale /home/nona/Pictures/stars-and-mountains-2.jpg
+exec_always picom --config ~/.config/picom.conf
+# i3 config stuff
+gaps inner 10 
+gaps outer 5 
+smart_gaps on
+for_window [class="^.*"] border pixel 0
+default_border pixel 0 
+default_floating_border pixel 0
