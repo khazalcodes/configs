@@ -1,0 +1,10 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "City Lights",
+    "files.autoSave": "afterDelay",
+    "vim.enableNeovim": true,
+    "vim.vimrc.enable": true,
+    "vim.leader": " "
+}

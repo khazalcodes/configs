@@ -22,6 +22,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin('~/.vim/plugged')
 
 Plug 'saltdotac/citylights.vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive' "git facilities
@@ -38,7 +39,7 @@ colorscheme gruvbox
 set background=dark
 
 " Make background transparent
-hi! Normal ctermbg=NONE guibg=NONE 
+" hi! Normal ctermbg=NONE guibg=NONE 
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -51,6 +52,7 @@ let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -91,3 +93,6 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+p
+
+" Copy entire file
+nnoremap <leader>gy ggVG
